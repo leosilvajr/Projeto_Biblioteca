@@ -1,4 +1,5 @@
 ﻿using BibliotecaJoia.Models.Contracts.Services;
+using BibliotecaJoia.Models.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BibliotecaJoia.Controllers
@@ -27,6 +28,27 @@ namespace BibliotecaJoia.Controllers
             }
             catch (Exception ex)
             {
+                throw ex;
+            }
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken] //Recurso de Segurança (Ataque CSRF)
+        public IActionResult Create([Bind("Nome, Autor, Editora")]LivroDto livro)
+        {
+            try
+            {
+                _livroService.Cadastrar(livro);
+                return RedirectToAction("List");
+            }
+            catch (Exception ex)
+            {
+
                 throw ex;
             }
         }

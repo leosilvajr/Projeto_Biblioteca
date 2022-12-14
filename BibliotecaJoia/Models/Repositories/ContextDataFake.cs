@@ -17,19 +17,19 @@ namespace BibliotecaJoia.Models.Repositories
 
         private static void InicializeData()
         {
-            var livro = new LivroDto("01", "Implementando Domain-Driven Design", "Vaugh Vernon", "Alta Books");
+            var livro = new LivroDto("Implementando Domain-Driven Design", "Vaugh Vernon", "Alta Books");
             Livros.Add(livro);
 
-            livro = new LivroDto("02", "Domain-Driven Design", "Eric Evans", "Alta Books");
+            livro = new LivroDto("Domain-Driven Design", "Eric Evans", "Alta Books");
             Livros.Add(livro);
 
-            livro = new LivroDto("03", "Redes Guia Prático", "Carlos Morimoto", "Sul Editores");
+            livro = new LivroDto("Redes Guia Prático", "Carlos Morimoto", "Sul Editores");
             Livros.Add(livro);
 
-            livro = new LivroDto("04", "PHP Programando com Orientação Objeto", "Pablo Dall' Ogilo", "Novatec");
+            livro = new LivroDto("PHP Programando com Orientação Objeto", "Pablo Dall' Ogilo", "Novatec");
             Livros.Add(livro);
 
-            livro = new LivroDto("05", "Introdução a Programação com Python", "Nilo Menezes. E", "Novatec");
+            livro = new LivroDto("Introdução a Programação com Python", "Nilo Menezes. E", "Novatec");
             Livros.Add(livro);
 
 
