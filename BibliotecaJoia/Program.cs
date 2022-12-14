@@ -6,10 +6,19 @@
  */
 
 
+using BibliotecaJoia.Models.Contracts.Repositories;
+using BibliotecaJoia.Models.Contracts.Services;
+using BibliotecaJoia.Models.Repositories;
+using BibliotecaJoia.Models.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//Classe que implementa interface
+builder.Services.AddScoped<ILivroRepository, LivroRepository>();
+builder.Services.AddScoped<ILivroService, LivroService>();
 
 var app = builder.Build();
 

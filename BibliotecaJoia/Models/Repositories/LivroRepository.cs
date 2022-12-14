@@ -8,7 +8,11 @@ namespace BibliotecaJoia.Models.Repositories
     {
         public List<LivroDto> Listar()
         {
-            throw new NotImplementedException();
+            //Acessando os dados do Banco Fake
+            var livros = ContextDataFake.Livros;
+
+            //Retornando os Dados.
+            return livros.OrderBy(p => p.Nome).ToList();
         }
     }
 }
