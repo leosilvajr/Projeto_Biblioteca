@@ -6,10 +6,10 @@
     ViewData["Title"] = "List";
 }
 
-<h1>Lista de Livros</h1>
+<h1>Cadastro de Livros</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Adicionar Livro</a>
 </p>
 <table class="table">
     <thead> @*Cabeçalho*@
@@ -20,12 +20,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
-            <th>
+@*            <th>
                 @Html.DisplayNameFor(model => model.Autor)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Editora)
-            </th>
+            </th>*@
             <th></th>
         </tr>
     </thead>
@@ -40,14 +40,14 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
-            <td>
+@*            <td>
                 @Html.DisplayFor(modelItem => item.Autor)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Editora)
-            </td>
+            </td>*@
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Atualizar", "Edit", new {id=item.Id}) |
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
